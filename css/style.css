@@ -1,4 +1,75 @@
+/* Variables */
+
+
 body {
     margin: 0;
     padding: 0;
 }
+
+div, section {
+    border: 1px solid blue;
+}
+/* MAIN GRID */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 40px 200px 30px 200px; */
+    grid-template-rows: repeat(4, 1fr);
+    max-width: 80%;
+    margin: auto;
+
+    grid-template-areas: 'header header header header'
+                         'main-overview main-overview main-overview main-overview'
+                         'today-overview-title today-overview-title today-overview-title today-overview-title'
+                         'today-overview today-overview today-overview today-overview';
+}
+
+.header {
+    grid-area: header;
+}
+
+.main-overview {
+    grid-area: main-overview;
+}
+
+.today-overview-title {
+    grid-area: today-overview-title;
+}
+
+.today-overview {
+    grid-area: today-overview;
+}
+
+/* SECOND GRID */
+
+.sub-main-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-template-areas: 'facebook twitter instagram youtube';
+}
+
+.facebook {
+    grid-area: facebook;
+}
+
+.twitter {
+    grid-area: twitter;
+}
+.instagram {
+    grid-area: instagram;
+}
+.youtube {
+    grid-area: youtube;
+}
+
+/* LAST GRID */
+
+.sub-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-template-rows: 50px 50px;
+}
+
