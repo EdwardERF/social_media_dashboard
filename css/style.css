@@ -27,6 +27,7 @@ body {
     background-color: var(--main-bg3);
     font-family: 'Inter', sans-serif;
     margin: 0;
+    margin-bottom: 40px;
     padding: 0;
 }
 
@@ -178,7 +179,109 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 110px 110px;
     gap: 25px;
+    grid-template-areas: 'fb-views fb-likes ig-likes ig-pviews'
+                         'twitter-rt twitter-likes yt-likes yt-tv';
 }
+
+.fb-views {
+    grid-area: fb-views;
+}
+
+.fb-likes {
+    grid-area: fb-likes;
+}
+
+.ig-likes {
+    grid-area: ig-likes;
+}
+
+.ig-pviews {
+    grid-area: ig-pviews;
+}
+
+.twitter-rt {
+    grid-area: twitter-rt;
+}
+
+.twitter-likes {
+    grid-area: twitter-likes;
+}
+
+.yt-likes {
+    grid-area: yt-likes;
+}
+
+.yt-tv {
+    grid-area: yt-tv;
+}
+
+/* OVERVIEW - TODAY */
+
+.first-line, .last-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-line {
+    display: flex;
+    align-items: center;
+    margin-top: .3em;
+}
+
+.first-line p {
+    margin: 0 auto 0 0;
+    font-size: .8em;
+}
+
+.first-line img {
+    margin: 0 .2em 0 auto;
+    height: 1.1em;
+}
+
+.last-line {
+    display: flex;
+    align-items: baseline;
+}
+
+.last-line h1 {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto 0 0;
+    font-size: 1.75em;
+}
+
+.last-line p {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 0 auto;
+}
+
+.increase {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+}
+
+.increase img {
+    margin-right: .1em;
+}
+
+.increase p {
+    font-size: 11px;
+}
+
+.ov-cards {
+    padding: 1.1em 1.5em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.ov-cards p {
+    font-weight: 700;
+    margin: 0 auto 0 0;
+}
+
 
 
 /* DETAILS SEPAIRED PER SECTION */
