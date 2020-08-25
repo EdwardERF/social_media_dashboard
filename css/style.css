@@ -1,22 +1,43 @@
 /* Variables */
+:root {
+    --main-bg: hsl(0, 0%, 100%);
+    --top-bg: hsl(232, 19%, 15%);
+    --card-bg: hsl(227, 47%, 96%);
+    --text-color-one: hsl(228, 12%, 44%);
+    --text-color-two: hsl(230, 17%, 14%);
+}
 
+.light {
+    --main-bg: hsl(0, 0%, 100%);
+    --top-bg: hsl(232, 19%, 15%);
+    --card-bg: hsl(227, 47%, 96%);
+    --text-color-one: hsl(228, 12%, 44%);
+    --text-color-two: hsl(230, 17%, 14%);
+}
+
+.dark {
+    --main-bg: hsl(230, 17%, 14%);
+    --top-bg: hsl(232, 19%, 15%);
+    --card-bg: hsl(228, 28%, 20%);
+    --text-color-one: hsl(228, 34%, 66%);
+    --text-color-two: hsl(0, 0%, 100%);
+}
 
 body {
+    background-color: var(--main-bg3);
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-div, section {
-    border: 1px solid blue;
-}
 /* MAIN GRID */
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* grid-template-rows: 40px 200px 30px 200px; */
-    grid-template-rows: repeat(4, 1fr);
-    max-width: 80%;
+    grid-template-rows: 120px 200px;
+    max-width: 77%;
     margin: auto;
 
     grid-template-areas: 'header header header header'
@@ -27,6 +48,9 @@ div, section {
 
 .header {
     grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .main-overview {
@@ -46,22 +70,105 @@ div, section {
 .sub-main-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    height: 100%;
+    gap: 25px;
     grid-template-areas: 'facebook twitter instagram youtube';
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 4px;
+}
+
+.facebook, .twitter, .instagram, .youtube {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+}
+
+.details-content {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-content img {
+    height: fit-content;
+    margin-right: 5px;
+}
+
+.details-content p {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.followers-content h1 {
+    font-size: 3.0em;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.followers-content p {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: .65em;
+    letter-spacing: .45em;
+}
+
+.stats-content {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-content img {
+    height: fit-content;
+    margin-right: 5px;
+}
+
+.stats-content p {
+    font-size: 11px;
+    font-weight: 700;
 }
 
 .facebook {
     grid-area: facebook;
+    border-top: 4px solid hsl(208, 92%, 53%);
 }
 
 .twitter {
     grid-area: twitter;
+    border-top: 4px solid hsl(203, 89%, 53%);
 }
+
 .instagram {
     grid-area: instagram;
 }
+
+.top-line {
+    grid-area: instagram;
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    height: 4px;
+    position: relative;
+    top: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
 .youtube {
     grid-area: youtube;
+    border-top: 4px solid hsl(348, 97%, 39%);
+}
+
+/* OVERVIEW TITLE */
+
+.today-overview-title h1 {
+    margin-top: 40px;
+    font-size: 1.35em;
 }
 
 /* LAST GRID */
@@ -69,7 +176,47 @@ div, section {
 .sub-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 110px 110px;
+    gap: 25px;
 }
 
+
+/* DETAILS SEPAIRED PER SECTION */
+/* HEADER */
+
+.title-container h1 {
+    margin-bottom: 0;
+    font-size: 1.55em;
+}
+
+.title-container p {
+    font-size: .8em;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.grid-container header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.switcher-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-right: 0;
+}
+
+.switcher-container p {
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+[class^="up"] {
+    color: hsl(163, 72%, 41%);
+}
+
+[class^="down"] {
+    color: hsl(356, 69%, 56%);
+}
