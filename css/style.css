@@ -6,6 +6,7 @@
     --text-color-one: hsl(228, 12%, 44%);
     --text-color-two: hsl(230, 17%, 14%);
     --toggle: hsl(230, 22%, 74%);
+    --switcher-place: translateX(21px);
 }
 
 .light {
@@ -25,14 +26,17 @@
     --text-color-two: hsl(0, 0%, 100%);
     /* CHEQUEAR ESTO CON ATENCION: GRADIENT TOGGLE */
     /* --toggle: hsl(230, 22%, 74%); */
+    --toggle: white;
 }
 
 body {
-    background-color: var(--main-bg3);
+    background-color: var(--main-bg);
     font-family: 'Inter', sans-serif;
     margin: 0;
     margin-bottom: 40px;
     padding: 0;
+    transition-duration: 500ms;
+    transition-property: background;
 }
 
 /* MAIN GRID */
@@ -83,6 +87,8 @@ body {
 .card {
     background: var(--card-bg);
     border-radius: 4px;
+    transition-duration: 500ms;
+    transition-property: background;
 }
 
 .facebook, .twitter, .instagram, .youtube {
@@ -107,6 +113,7 @@ body {
 .details-content p {
     font-size: 11px;
     font-weight: 700;
+    color: var(--text-color-one);
 }
 
 .followers-content h1 {
@@ -114,6 +121,7 @@ body {
     font-weight: 700;
     margin-bottom: 0;
     margin-top: 0;
+    color: var(--text-color-two);
 }
 
 .followers-content p {
@@ -121,6 +129,7 @@ body {
     font-weight: 400;
     font-size: .65em;
     letter-spacing: .45em;
+    color: var(--text-color-one);
 }
 
 .stats-content {
@@ -174,6 +183,7 @@ body {
 .today-overview-title h1 {
     margin-top: 40px;
     font-size: 1.35em;
+    color: var(--text-color-one);
 }
 
 /* LAST GRID */
@@ -235,6 +245,7 @@ body {
 .first-line p {
     margin: 0 auto 0 0;
     font-size: .8em;
+    color: var(--text-color-one);
 }
 
 .first-line img {
@@ -252,6 +263,7 @@ body {
     align-items: flex-end;
     margin: 0 auto 0 0;
     font-size: 1.75em;
+    color: var(--text-color-two);
 }
 
 .last-line p {
@@ -294,12 +306,14 @@ body {
 .title-container h1 {
     margin-bottom: 0;
     font-size: 1.55em;
+    color: var(--text-color-two);
 }
 
 .title-container p {
     font-size: .8em;
     font-weight: 700;
     margin-top: 2px;
+    color: var(--text-color-one);
 }
 
 .grid-container header {
@@ -319,32 +333,38 @@ body {
     margin-right: 1em;
     font-size: 12px;
     font-weight: 700;
+    color: var(--text-color-one);
 }
 
 .switcher-container button {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: var(--switcher-place);
 }
 
 .switcher-btn {
-    width: 40px;
+    width: 42px;
     height: 20px;
     border-radius: 10px;
-    border: .3em solid var(--card-bg);
-    background: var(--card-bg);
+    border: .2em solid var(--card-bg);
+    border-top: .3em solid var(--card-bg);
+    border-bottom: .3em solid var(--card-bg);
+    border-color: var(--toggle);
+    background: var(--toggle);
     padding: 0;
 }
 
 .switcher-btn div {
     margin: 0;
     padding: 0;
-
     width: 16px;
     height: 16px;
     border-radius: 9px;
     border: none;
-    background: gray;
+    background: var(--card-bg);
+    transform: var(--switcher-place);
+    transition-duration: 300ms;
+    transition-property: transform;
 }
 
 [class^="up"] {
