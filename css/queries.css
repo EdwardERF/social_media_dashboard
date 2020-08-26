@@ -1,0 +1,101 @@
+/* RESPONSIVE */
+
+/* < 1000px || > 720px */
+@media screen and (max-width: 1000px) {
+    /* .grid-container {
+        grid-template-rows: 120px 400px;
+    }
+
+    .sub-main-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        grid-template-areas: 'facebook twitter instagram'
+                             'youtube . .';
+    } */
+
+    .sub-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 110px);
+        grid-template-areas: 'fb-views fb-likes ig-likes'
+                             'ig-pviews twitter-rt twitter-likes'
+                             'yt-likes yt-tv .';
+    }
+}
+
+/* < 720px */
+@media screen and (max-width: 720px) {
+    .grid-container {
+        grid-template-rows: 120px 410px;
+    }
+
+    .sub-main-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        grid-template-areas: 'facebook twitter instagram'
+                             'youtube . .';
+    }
+}
+
+/* < 670px */
+@media screen and (max-width: 670px) {
+    .sub-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 110px);
+        grid-template-areas: 'fb-views fb-likes'
+                             'ig-likes ig-pviews'
+                             'twitter-rt twitter-likes'
+                             'yt-likes yt-tv';
+    }
+
+    .sub-main-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        grid-template-areas: 'facebook twitter'
+                             'instagram youtube';
+    }
+}
+
+/* < 375px */
+@media screen and (max-width: 375px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px;
+        max-width: 85%;
+        grid-template-areas: 'header'
+                             'main-overview'
+                             'today-overview-title'
+                             'today-overview';
+    }
+
+    .grid-container header {
+        display: block;
+        margin-top: 20px;
+    }
+    
+    .title-container p {
+        border-bottom: 1px solid hsl(230, 22%, 74%);
+        padding-bottom: 25px;
+    }
+
+    .switcher-container {
+        justify-content: space-between;
+    }
+
+    .sub-main-container, .today-overview-title, .sub-container {
+        display: block;
+    }
+
+    .today-overview-title h1 {
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    .card {
+        margin-bottom: 25px;
+        height: 80px;
+    }
+    
+    .facebook, .twitter, .instagram, .youtube {
+        height: 200px;
+    }
+}
