@@ -8,7 +8,7 @@ function changeSwitcher(){
         document.documentElement.style.setProperty('--card-bg', 'hsl(228, 28%, 20%)')
         document.documentElement.style.setProperty('--text-color-one', 'hsl(228, 34%, 66%)')
         document.documentElement.style.setProperty('--text-color-two', 'hsl(0, 0%, 100%)')
-        document.documentElement.style.setProperty('--toggle', 'white')
+        document.documentElement.style.setProperty('--toggle', 'linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))')
         document.documentElement.style.setProperty('--switcher-place', 'translateX(0)')
 
         switcher = false

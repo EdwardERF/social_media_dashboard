@@ -6,6 +6,7 @@
     --text-color-one: hsl(228, 12%, 44%);
     --text-color-two: hsl(230, 17%, 14%);
     --toggle: hsl(230, 22%, 74%);
+    --toggle-hover: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     --switcher-place: translateX(21px);
 }
 
@@ -25,8 +26,8 @@
     --text-color-one: hsl(228, 34%, 66%);
     --text-color-two: hsl(0, 0%, 100%);
     /* CHEQUEAR ESTO CON ATENCION: GRADIENT TOGGLE */
-    /* --toggle: hsl(230, 22%, 74%); */
-    --toggle: white;
+    --toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    /* --toggle: white; */
 }
 
 body {
@@ -347,13 +348,19 @@ body {
     width: 42px;
     height: 20px;
     border-radius: 10px;
-    border: .2em solid var(--card-bg);
-    border-top: .3em solid var(--card-bg);
-    border-bottom: .3em solid var(--card-bg);
-    border-color: var(--toggle);
+    border: none;
+    /* border: .2em solid var(--card-bg); */
+    /* border-top: .3em solid var(--card-bg); */
+    /* border-bottom: .3em solid var(--card-bg); */
+    /* border-color: var(--toggle); */
     background: var(--toggle);
     padding: 0;
+    padding-left: 2px;
+    transition-duration: 500ms;
+    transition-property: background;
 }
+
+
 
 .switcher-btn div {
     margin: 0;
@@ -380,4 +387,5 @@ body {
 
 .switcher-btn:hover {
     cursor: pointer;
+    background: var(--toggle-hover);
 }

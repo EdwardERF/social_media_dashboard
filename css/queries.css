@@ -1,18 +1,11 @@
+/* VARIABLES */
+
+
+
 /* RESPONSIVE */
 
 /* < 1000px || > 720px */
 @media screen and (max-width: 1000px) {
-    /* .grid-container {
-        grid-template-rows: 120px 400px;
-    }
-
-    .sub-main-container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 200px);
-        grid-template-areas: 'facebook twitter instagram'
-                             'youtube . .';
-    } */
-
     .sub-container {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 110px);
