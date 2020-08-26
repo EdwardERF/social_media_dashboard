@@ -340,6 +340,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: var(--switcher-place);
+    outline: none;
 }
 
 .switcher-btn {
@@ -373,4 +374,10 @@ body {
 
 [class^="down"] {
     color: hsl(356, 69%, 56%);
+}
+
+/* HOVERS */
+
+.switcher-btn:hover {
+    cursor: pointer;
 }
